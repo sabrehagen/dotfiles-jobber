@@ -1,0 +1,14 @@
+version: 1.4
+
+jobs:
+  desktop-environment-build-dotfiles:
+    cmd: ~/.config/scripts/desktop-environment-build-dotfiles-trigger.sh
+    time: '*/5'
+    onError: Continue
+    notifyOnSuccess:
+      - type: program
+        path: dunst
+  wallpaper:
+    cmd: zsh -c 'DISPLAY=:1 ~/.config/scripts/wal.sh'
+    time: '0 0 */6'
+    onError: Continue
