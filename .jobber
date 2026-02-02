@@ -4,12 +4,9 @@ jobs:
     cmd: ~/.config/scripts/desktop-environment-build-dotfiles-trigger.sh
     time: '*/5'
     onError: Continue
-    notifyOnSuccess:
-    - type: program
-      path: /home/jackson/.config/scripts/jobber-dunstify-sink
-    notifyOnError:
-    - type: program
-      path: /home/jackson/.config/scripts/jobber-dunstify-sink.sh
+    # notifyOnError:
+    # - type: program
+    #   path: ~/.config/scripts/jobber-dunstify-sink.sh
   wallpaper:
     cmd: zsh -c 'DISPLAY=:1 ~/.config/scripts/wal.sh'
     time: 0 0 */6
